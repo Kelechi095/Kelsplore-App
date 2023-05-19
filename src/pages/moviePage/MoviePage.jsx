@@ -9,7 +9,7 @@ const MoviePage = () => {
   const [movieInfo, setMovieInfo] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const fetchMovies = async () => {
-    const response = await apiRequest.get(`&s=${searchValue}`);
+    const response = await apiRequest.get(`${searchValue}`);
     setMovieInfo(response.data.Search);
   };
 
