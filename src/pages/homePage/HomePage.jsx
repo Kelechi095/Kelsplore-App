@@ -9,7 +9,7 @@ const HomePage = () => {
 
       <Navbar />
       <section>
-        <h2>MINIMALIST PORTFOLIO</h2>
+        <h2>MINIMALIST PORTFOLIO SITE</h2>
 
         
         <Link to="/about">
