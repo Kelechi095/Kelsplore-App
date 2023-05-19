@@ -38,6 +38,10 @@
   margin-top: 10px;
 }
 
+.title-rating .title {
+    max-width: 70%;
+}
+
 .rating {
   display: flex;
   justify-content: center;
@@ -106,5 +110,9 @@
   }
   .back-header button {
     padding: 3px 20px;
+  }
+
+  .title-rating .title {
+    font-size: 16px;
   }
 }
