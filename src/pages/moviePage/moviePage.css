@@ -11,19 +11,20 @@
 }
 
 .header-title button {
-    margin-top: 40px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: none;
-    background-image: linear-gradient(to right, grey, rgb(56, 56, 56));
-    border: none;
-    color: rgb(206, 202, 202);
-    font-weight: 600;
-    cursor: pointer;
+  margin-top: 40px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  background-image: linear-gradient(to right, grey, rgb(27, 26, 26));
+
+  border: none;
+  color: rgb(170, 170, 170);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .header-title button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
@@ -36,5 +37,4 @@
   .header-title button {
     padding: 10px 7px;
   }
-
 }

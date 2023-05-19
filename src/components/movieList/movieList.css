@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 550px;
+  height: 500px;
   border-radius: 5px;
   overflow: hidden;
   padding: 0 0 10px 0;
@@ -20,15 +20,35 @@
 }
 
 .movie-info img {
-  height: 85%;
+  height: 87%;
 }
 
 .movie-info .title {
   text-align: center;
   font-weight: 500;
   color: rgb(204, 202, 202);
-  font-size: 16px;
-  margin-top: 14px;
+  font-size: 18px;
+}
+
+.title-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    color: rgb(184, 179, 179);
+    
 }
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
@@ -38,6 +58,7 @@
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
+    gap: 30px;
   }
   .movie-info {
     border-radius: 0;
