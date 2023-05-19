@@ -58,31 +58,52 @@ const Navbar = () => {
         </li>
       </ul>
 
+      {/* MOBILE NAV MENU */}
+
       <ul className="mobile-menu">
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
-        >
-          <AiOutlineHome className="icon" />
-        </NavLink>
-        <NavLink
-          to="/movies"
-          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
-        >
-          <MdOutlineMovieCreation className="icon" />
-        </NavLink>
-        <NavLink
-          to="/books"
-          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
-        >
-          <BsBook className="icon" />
-        </NavLink>
-        <NavLink
-          to="/message"
-          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
-        >
-          <BsEnvelope className="icon" />
-        </NavLink>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "activeBtn" : "inactiveBtn"
+            }
+          >
+            <AiOutlineHome className="icon" />
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/movies"
+            className={({ isActive }) =>
+              isActive ? "activeBtn" : "inactiveBtn"
+            }
+          >
+            <MdOutlineMovieCreation className="icon" />
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/books"
+            className={({ isActive }) =>
+              isActive ? "activeBtn" : "inactiveBtn"
+            }
+          >
+            <BsBook className="icon" />
+          </NavLink>
+        </li>
+        
+        <li>
+          <NavLink
+            to="/message"
+            className={({ isActive }) =>
+              isActive ? "activeBtn" : "inactiveBtn"
+            }
+          >
+            <BsEnvelope className="icon" />
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

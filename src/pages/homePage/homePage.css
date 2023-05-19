@@ -51,7 +51,7 @@ section button:hover {
 
 @media screen and (max-width: 760px){
     section button {
-        padding: 7px 15px;
+        padding: 10px 30px;
     }
 
     section h2 {
