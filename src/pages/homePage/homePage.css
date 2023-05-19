@@ -1,0 +1,60 @@
+
+
+/* section h2 {
+    background: linear-gradient(to right, rgb(84, 84, 185), cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+} */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section span {
+    color: white;
+}
+
+section h2 {
+    font-weight: 400;
+    text-align: center;
+    background: linear-gradient(to right, white, grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.second-line {
+    color: white;
+}
+
+section button {
+    margin-top: 40px;
+    padding: 11px 40px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, grey, rgb(56, 56, 56));
+    border: none;
+    color: rgb(206, 202, 202);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section button:hover {
+    opacity: 0.8;
+}
+
+/* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
+
+
+@media screen and (max-width: 760px){
+    section button {
+        padding: 7px 15px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+}

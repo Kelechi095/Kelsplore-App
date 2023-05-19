@@ -1,0 +1,103 @@
+nav h2 {
+  font-weight: 300;
+}
+
+nav sub {
+  font-size: 30px;
+}
+
+nav {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  padding: 20px;
+  border-bottom: 1px solid rgb(97, 96, 96);
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 30%;
+}
+
+.logo h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.logo span {
+  font-family: 400;
+  font-size: 16px;
+  color: var(--grey3);
+}
+
+.logo-icon {
+  color: var(--grey3);
+}
+
+.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.desktop-menu li {
+  font-size: 13px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.activeBtn {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.inactiveBtn {
+  color: grey;
+  text-decoration: none;
+}
+
+.connect {
+  border-bottom: 1px solid grey;
+  padding-bottom: 3px;
+}
+
+/* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
+
+@media screen and (max-width: 760px) {
+  nav {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding: 0px 30px;
+    height: 50px;
+  }
+  nav .logo {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .icon {
+    font-size: 21px;
+  }
+}

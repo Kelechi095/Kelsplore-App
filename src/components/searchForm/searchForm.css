@@ -1,0 +1,41 @@
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid grey;
+    align-items: center;
+    border-radius: 30px;
+    padding: 5px 0;
+}
+
+.search .icon {
+    color: grey;
+}
+
+.search input {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    padding: 6px ;
+    border-radius: 5px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+/* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
+
+
+@media screen and (max-width: 760px) {
+    .search .icon {
+        font-size: 13px;
+    }
+
+    .search {
+        padding: 0 5px;
+    }
+}
+

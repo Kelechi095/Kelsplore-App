@@ -1,0 +1,15 @@
+.movie-page {
+    width: 100%;
+}
+.movie-section {
+    width: 30%;
+}
+
+/* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
+
+
+@media  screen and (max-width: 760px) {
+    .movie-section {
+        width: 70%;
+    }
+}
