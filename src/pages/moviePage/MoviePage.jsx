@@ -1,38 +1,43 @@
-// 364d90c4eafb84407135bc900f697f3d
-
-import { apiRequest } from "../../components/api/apiRequest";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext} from "react";
 import "./moviePage.css";
 import Navbar from "../../components/navbar/Navbar";
-import SearchForm from "../../components/searchForm/SearchForm";
 import MovieList from "../../components/movieList/MovieList";
+import Tvshow from "../../components/tvshow/Tvshow";
+import { useQuery } from "react-query";
+import FetchContext from "../../components/context/FetchContext";
 
 const MoviePage = () => {
-  const [movieInfo, setMovieInfo] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const {fetchMovies, fetchShows} = useContext(FetchContext)
+  
+  const { data: movies } = useQuery({
+    queryKey: ["movies"],
+    queryFn: fetchMovies,
+  });
 
-  const fetchMovies = async () => {
-    const response = await axios.get(
-      "https://api.themoviedb.org/3/trending/all/day?api_key=364d90c4eafb84407135bc900f697f3d&page=1"
-    );
-    console.log(response.data);
-    setMovieInfo(response.data.results);
-  };
+  const { data: shows } = useQuery({
+    queryKey: ["shows"],
+    queryFn: fetchShows,
+  });
 
-  useEffect(() => {
-    fetchMovies();
-  }, [searchValue]);
-
-  console.log(movieInfo);
 
   return (
     <main className="movie-page">
       <Navbar />
       <section className="movie-section">
-        <SearchForm searchValue={searchValue} setSearchValue={setSearchValue} />
+        {/* <SearchForm searchValue={searchValue} setSearchValue={setSearchValue} /> */}
       </section>
-      <MovieList movieInfo={movieInfo} />
+      {movies?.results?.length > 0 && (
+        <div className="header-title">
+          <button>TRENDING MOVIES</button>
+        </div>
+      )}
+      <MovieList movies={movies?.results} />
+      {shows?.results?.length > 0 && (
+        <div className="header-title">
+          <button>TRENDING TV SHOWS</button>
+        </div>
+      )}
+      <Tvshow shows={shows?.results} />
     </main>
   );
 };
