@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="logo">
         <FaGripfire size={23} className="logo-icon" />
         <h4 className="desktop-logo">
-          Awoms<span>Kelechi</span>
+          Kel<span>Splore</span>
         </h4>
       </div>
       <ul className="desktop-menu">
