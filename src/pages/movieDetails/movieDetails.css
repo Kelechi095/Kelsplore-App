@@ -1,0 +1,16 @@
+.details {
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content
+    
+}
+
+.details img {
+    width: 100%;
+}
+
+@media screen and (max-width:760px) {
+    .details {
+        margin-top: 20px;
+    }
+}

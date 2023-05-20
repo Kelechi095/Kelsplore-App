@@ -28,16 +28,18 @@ const TrendingMovies = () => {
 
       <div className="movie-list">
         {movies?.results?.slice(0, 18).map((movie) => (
-          <div key={movie.id} className="movie-info">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt=""
-            />
-            <div className="title-rating">
-              <p className="title">{movie.title}</p>
-              <div className="rating">{movie?.vote_average?.toFixed(1)}</div>
+          <Link to={`movie/${movie.id}`} key={movie.id}>
+            <div key={movie.id} className="movie-info">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt=""
+              />
+              <div className="title-rating">
+                <p className="title">{movie.title}</p>
+                <div className="rating">{movie?.vote_average?.toFixed(1)}</div>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

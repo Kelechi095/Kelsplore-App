@@ -7,7 +7,6 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { MdKeyboardBackspace } from "react-icons/md";
 
-
 const TrendingShows = () => {
   const { fetchShows } = useContext(FetchContext);
 
@@ -34,17 +33,19 @@ const TrendingShows = () => {
         </Link>
       </div>
       <div className="show-list">
-        {shows?.results?.slice(0, 18).map((movie) => (
-          <div key={movie.id} className="show-info">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt=""
-            />
-            <div className="title-rating">
-              <p className="title">{movie.name}</p>
-              <div className="rating">{movie?.vote_average?.toFixed(1)}</div>
+        {shows?.results?.slice(0, 18).map((show) => (
+          <Link to={`show/${show.id}`} key={show.id}>
+            <div key={show?.id} className="show-info">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
+                alt=""
+              />
+              <div className="title-rating">
+                <p className="title">{show?.name}</p>
+                <div className="rating">{show?.vote_average?.toFixed(1)}</div>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
