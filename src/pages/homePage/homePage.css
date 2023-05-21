@@ -21,7 +21,7 @@ section h2 {
   background: linear-gradient(to right, white, grey);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 2rem;
 }
 

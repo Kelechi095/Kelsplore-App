@@ -11,12 +11,13 @@ const HomePage = () => {
         <h2>
           <Typewriter
             words={[
+              "MINIMALIST WEBSITE",
               "EXPLORE TRENDING MOVIES",
               "CHECK OUT MY FAVORITE BOOKS",
               "REACH OUT TO ME!",
               "MINIMALIST WEBSITE",
             ]}
-            loop={2}
+            loop={1}
             cursor
             cursorStyle="|"
             typeSpeed={70}
