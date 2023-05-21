@@ -16,9 +16,10 @@ const MovieDetails = () => {
     return response.data;
   };
 
-  const { data: movieDetails } = useQuery({
+  const { data: movieDetails, isSuccess } = useQuery({
     queryKey: ["movieDetails"],
     queryFn: fetchMovieDetails,
+    cacheTime: 0,
   });
 
   console.log(movieDetails);
@@ -26,12 +27,14 @@ const MovieDetails = () => {
   return (
     <div>
       <Navbar />
-      <div className="details">
-        <img
-          src={`https://image.tmdb.org/t/p/original${movieDetails?.poster_path}`}
-          alt=""
-        />
-      </div>
+      {isSuccess && (
+        <div className="details">
+          <img
+            src={`https://image.tmdb.org/t/p/original${movieDetails?.poster_path}`}
+            alt=""
+          />
+        </div>
+      )}
     </div>
   );
 };

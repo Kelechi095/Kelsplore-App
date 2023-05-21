@@ -15,20 +15,21 @@ const TvShowDetails = () => {
     return response.data;
   };
 
-  const { data: tvShowDetails } = useQuery({
+  const { data: tvShowDetails, isSuccess } = useQuery({
     queryKey: ["tvShowDetails"],
     queryFn: fetchTvShowDetails,
+    cacheTime: 0
   });
 
   return (
     <div>
       <Navbar />
-      <div className="details">
+      {isSuccess && <div className="details">
         <img
           src={`https://image.tmdb.org/t/p/original${tvShowDetails?.poster_path}`}
           alt=""
         />
-      </div>
+      </div>}
     </div>
   );
 };

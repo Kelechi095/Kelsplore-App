@@ -22,20 +22,22 @@ const MoviePage = () => {
 
   return (
     <main className="movie-page">
-      <Navbar />(
+      <Navbar />
+      {movies && (
       <div className="header-title">
         <Link to="/movies/trending-movies">
           <button>TRENDING MOVIES</button>
         </Link>
       </div>
-      )
-      <MovieList movies={movies?.results} />(
+        )}
+      <MovieList movies={movies?.results} />
+      {movies && shows && (
       <div className="header-title">
         <Link to="/movies/trending-shows">
           <button>TRENDING TV SHOWS</button>
         </Link>
       </div>
-      )
+      )}
       <TvshowsList shows={shows?.results} />
     </main>
   );
