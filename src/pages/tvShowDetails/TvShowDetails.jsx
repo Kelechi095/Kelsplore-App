@@ -6,11 +6,9 @@ import Navbar from "../../components/navbar/Navbar";
 const TvShowDetails = () => {
   const { id } = useParams();
 
-  const APIKEY = "364d90c4eafb84407135bc900f697f3d"
-
   const fetchTvShowDetails = async () => {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/tv/${id}?api_key=${APIKEY}`
+      `https://api.themoviedb.org/3/tv/${id}?api_key=364d90c4eafb84407135bc900f697f3d`
     );
     return response.data;
   };

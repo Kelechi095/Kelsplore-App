@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { FetchProvider } from "./components/context/FetchContext";
 import MoviePage from "./pages/moviePage/MoviePage";
 import HomePage from "./pages/homePage/HomePage";
 import AboutPage from "./pages/aboutPage/AboutPage";
@@ -6,7 +7,6 @@ import BookPage from "./pages/bookPage/BookPage";
 import MessageMe from "./pages/messageMe/MessageMe";
 import TrendingMovies from "./pages/trendingMovies/TrendingMovies";
 import TrendingShows from "./pages/trendingShows/TrendingShows";
-import { FetchProvider } from "./components/context/FetchContext";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
 import Layout from "./components/layout/Layout";
 import MovieLayout from "./components/layout/MovieLayout";
@@ -25,13 +25,31 @@ function App() {
               <Route path="/movies" element={<MoviePage />} />
               <Route path="/movies/movie/:id" element={<MovieDetails />} />
               <Route path="/movies/show/:id" element={<TvShowDetails />} />
-              <Route path="/movies/trending-movies" element={<TrendingMoviesLayout />}>
-                <Route path="/movies/trending-movies" element={<TrendingMovies />} />
-                <Route path="/movies/trending-movies/movie/:id" element={<MovieDetails />} />
+              <Route
+                path="/movies/trending-movies"
+                element={<TrendingMoviesLayout />}
+              >
+                <Route
+                  path="/movies/trending-movies"
+                  element={<TrendingMovies />}
+                />
+                <Route
+                  path="/movies/trending-movies/movie/:id"
+                  element={<MovieDetails />}
+                />
               </Route>
-              <Route path="/movies/trending-shows" element={<TrendingShowsLayout />}>
-                <Route path="/movies/trending-shows" element={<TrendingShows />} />
-                <Route path="/movies/trending-shows/show/:id" element={<TvShowDetails />} />
+              <Route
+                path="/movies/trending-shows"
+                element={<TrendingShowsLayout />}
+              >
+                <Route
+                  path="/movies/trending-shows"
+                  element={<TrendingShows />}
+                />
+                <Route
+                  path="/movies/trending-shows/show/:id"
+                  element={<TvShowDetails />}
+                />
               </Route>
             </Route>
             <Route path="/books" element={<BookPage />} />

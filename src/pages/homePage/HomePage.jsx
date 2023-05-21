@@ -3,19 +3,18 @@ import Navbar from "../../components/navbar/Navbar";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 
-
 const HomePage = () => {
   return (
     <main className="home-page">
       <Navbar />
       <section>
         <h2>
-        <Typewriter
+          <Typewriter
             words={[
               "EXPLORE TRENDING MOVIES",
               "CHECK OUT MY FAVORITE BOOKS",
               "REACH OUT TO ME!",
-              "MINIMALIST WEBSITE"
+              "MINIMALIST WEBSITE",
             ]}
             loop={2}
             cursor

@@ -1,10 +1,9 @@
-import Navbar from "../../components/navbar/Navbar";
 import "./trendingShows.css";
-import { useContext, useEffect } from "react";
+import Navbar from "../../components/navbar/Navbar";
 import FetchContext from "../../components/context/FetchContext";
+import { useContext, useEffect } from "react";
 import { useQuery } from "react-query";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { MdKeyboardBackspace } from "react-icons/md";
 
 const TrendingShows = () => {

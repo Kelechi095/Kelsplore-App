@@ -1,11 +1,11 @@
-import { useContext } from "react";
 import "./moviePage.css";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
 import Navbar from "../../components/navbar/Navbar";
 import MovieList from "../../components/movieList/MovieList";
 import TvshowsList from "../../components/tvshowsList/TvshowsList";
-import { useQuery } from "react-query";
 import FetchContext from "../../components/context/FetchContext";
-import { Link, Outlet } from "react-router-dom";
 
 const MoviePage = () => {
   const { fetchMovies, fetchShows } = useContext(FetchContext);
@@ -24,19 +24,19 @@ const MoviePage = () => {
     <main className="movie-page">
       <Navbar />
       {movies && (
-      <div className="header-title">
-        <Link to="/movies/trending-movies">
-          <button>TRENDING MOVIES</button>
-        </Link>
-      </div>
-        )}
+        <div className="header-title">
+          <Link to="/movies/trending-movies">
+            <button>TRENDING MOVIES</button>
+          </Link>
+        </div>
+      )}
       <MovieList movies={movies?.results} />
       {movies && shows && (
-      <div className="header-title">
-        <Link to="/movies/trending-shows">
-          <button>TRENDING TV SHOWS</button>
-        </Link>
-      </div>
+        <div className="header-title">
+          <Link to="/movies/trending-shows">
+            <button>TRENDING TV SHOWS</button>
+          </Link>
+        </div>
       )}
       <TvshowsList shows={shows?.results} />
     </main>

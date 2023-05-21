@@ -5,11 +5,9 @@ const FetchContext = createContext();
 
 export const FetchProvider = ({ children }) => {
 
-  const APIKEY = "364d90c4eafb84407135bc900f697f3d"
-
   const fetchMovies = async () => {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/trending/all/day?api_key=${APIKEY}&page=1`
+      `https://api.themoviedb.org/3/trending/all/day?api_key=364d90c4eafb84407135bc900f697f3d&page=1`
     );
     return response.data;
   };

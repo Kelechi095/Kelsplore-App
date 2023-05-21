@@ -7,11 +7,9 @@ import axios from "axios";
 const MovieDetails = () => {
   const { id } = useParams();
 
-  const APIKEY = "364d90c4eafb84407135bc900f697f3d"
-
   const fetchMovieDetails = async () => {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=364d90c4eafb84407135bc900f697f3d`
     );
     return response.data;
   };
@@ -21,8 +19,6 @@ const MovieDetails = () => {
     queryFn: fetchMovieDetails,
     cacheTime: 0,
   });
-
-  console.log(movieDetails);
 
   return (
     <div>
