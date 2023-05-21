@@ -17,7 +17,7 @@ const MovieList = ({ movies }) => {
             opacity: 0.1
           }}
           transition={{
-            duration: 3
+            duration: 2
           }}
           >
             <img

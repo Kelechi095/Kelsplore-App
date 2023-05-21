@@ -11,12 +11,14 @@ const TvshowsList = ({ shows }) => {
             className="show-info"
             animate={{
               opacity: 1,
+            
             }}
             initial={{
               opacity: 0.1,
+            
             }}
             transition={{
-              duration: 5,
+              duration: 2,
             }}
           >
             <img

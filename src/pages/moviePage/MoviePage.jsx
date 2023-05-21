@@ -10,7 +10,7 @@ import FetchContext from "../../components/context/FetchContext";
 const MoviePage = () => {
   const { fetchMovies, fetchShows } = useContext(FetchContext);
 
-  const { data: movies } = useQuery({
+  const { data: movies, isSuccess } = useQuery({
     queryKey: ["movies"],
     queryFn: fetchMovies,
   });
@@ -23,7 +23,7 @@ const MoviePage = () => {
   return (
     <main className="movie-page">
       <Navbar />
-      {movies && (
+      { isSuccess &&(
         <div className="header-title">
           <Link to="/movies/trending-movies">
             <button>TRENDING MOVIES</button>
@@ -31,7 +31,7 @@ const MoviePage = () => {
         </div>
       )}
       <MovieList movies={movies?.results} />
-      {movies && shows && (
+      { (
         <div className="header-title">
           <Link to="/movies/trending-shows">
             <button>TRENDING TV SHOWS</button>
