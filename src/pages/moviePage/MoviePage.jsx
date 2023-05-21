@@ -23,22 +23,20 @@ const MoviePage = () => {
   return (
     <main className="movie-page">
       <Navbar />
-      { isSuccess &&(
-        <div className="header-title">
-          <Link to="/movies/trending-movies">
-            <button>TRENDING MOVIES</button>
-          </Link>
-        </div>
-      )}
+      <div className="header-title">
+        <Link to="/movies/trending-movies">
+          <button>TRENDING MOVIES</button>
+        </Link>
+      </div>
       <MovieList movies={movies?.results} />
-      { (
-        <div className="header-title">
-          <Link to="/movies/trending-shows">
-            <button>TRENDING TV SHOWS</button>
-          </Link>
-        </div>
-      )}
-      <TvshowsList shows={shows?.results} />
+
+      <div className="header-title">
+        <Link to="/movies/trending-shows">
+          <button>TRENDING TV SHOWS</button>
+        </Link>
+      </div>
+
+      {isSuccess &&  <TvshowsList shows={shows?.results} />}
     </main>
   );
 };
