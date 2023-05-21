@@ -5,7 +5,7 @@ const FetchContext = createContext();
 
 export const FetchProvider = ({ children }) => {
 
-  const APIKEY = import.meta.env.VITE_API_KEY;
+  const APIKEY = "364d90c4eafb84407135bc900f697f3d"
 
   const fetchMovies = async () => {
     const response = await axios.get(

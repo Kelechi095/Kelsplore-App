@@ -6,7 +6,7 @@ import Navbar from "../../components/navbar/Navbar";
 const TvShowDetails = () => {
   const { id } = useParams();
 
-  const APIKEY = import.meta.env.VITE_API_KEY;
+  const APIKEY = "364d90c4eafb84407135bc900f697f3d"
 
   const fetchTvShowDetails = async () => {
     const response = await axios.get(
