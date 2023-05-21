@@ -30,13 +30,13 @@ const MoviePage = () => {
       </div>
       <MovieList movies={movies?.results} />
 
-      <div className="header-title">
+      { isSuccess &&<div className="header-title">
         <Link to="/movies/trending-shows">
           <button>TRENDING TV SHOWS</button>
         </Link>
-      </div>
+      </div>}
 
-      {isSuccess &&  <TvshowsList shows={shows?.results} />}
+      {isSuccess && <TvshowsList shows={shows?.results} />}
     </main>
   );
 };
