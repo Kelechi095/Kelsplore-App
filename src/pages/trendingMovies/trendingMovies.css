@@ -1,9 +1,9 @@
 .movie-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 50px;
   gap: 20px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -62,7 +62,7 @@
   margin: 0 auto;
   margin-top: 85px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .movies-back-header button {
-  padding: 3px 30px;
+  padding: 10px 30px;
   background-color: var(--dark-mode-button);
   color: var(--light-mode-bg);
   border: none;
@@ -91,6 +91,21 @@
   color: var(--light-mode-bg);
 }
 
+/* MEDIA QUERY FOR SCREEN SIZES BELOW 1060PX AND GREATER THAN 760PX */
+
+@media screen and (max-width: 1060px) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 30px;
+    padding: 20px 10px;
+
+  }
+
+}
+
+
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
 
 @media screen and (max-width: 760px) {
@@ -99,6 +114,8 @@
     grid-template-columns: 1fr;
     width: 100%;
     gap: 30px;
+    padding: 20px 10px;
+
   }
   .movie-info {
     border-radius: 0;
@@ -115,7 +132,7 @@
   }
   
   .movies-back-header button {
-    padding: 5px 30px;
+    padding: 10px 30px;
   }
 
   .title-rating .title {

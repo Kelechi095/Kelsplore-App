@@ -21,22 +21,17 @@ const TrendingMovies = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-
   return (
     <div>
       <Navbar />
       <div className="movies-back-header">
-        <h2>ALL TRENDING MOVIES</h2>
         <Link to="/movies">
-          <button>
-            <MdKeyboardBackspace className="icon" />
-          </button>
+          <button>Back</button>
         </Link>
       </div>
 
-      <div 
-      className="movie-list">
-        {movies?.results?.slice(0, 18).map((movie) => (
+      <div className="movie-list">
+        {movies?.results?.slice(0, 20).map((movie) => (
           <Link to={`movie/${movie.id}`} key={movie.id}>
             <div key={movie.id} className="movie-info">
               <img

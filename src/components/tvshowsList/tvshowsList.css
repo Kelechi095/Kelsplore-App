@@ -1,9 +1,9 @@
 .show-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
+  padding: 20px 50px;
   gap: 20px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -51,6 +51,21 @@
   color: var(--rating);
 }
 
+/* MEDIA QUERY FOR SCREEN SIZES BELOW 1060PX AND GREATER THAN 760PX */
+
+@media screen and (max-width: 1060px) {
+  .show-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 30px;
+    padding: 20px 10px;
+
+  }
+
+}
+
+
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
 
 @media screen and (max-width: 760px) {
@@ -59,6 +74,8 @@
     grid-template-columns: 1fr;
     width: 100%;
     gap: 30px;
+    padding: 20px 10px;
+
   }
   .show-info {
     border-radius: 0;

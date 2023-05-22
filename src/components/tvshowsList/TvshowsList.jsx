@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TvshowsList = ({ shows }) => {
   return (
     <div className="show-list">
-      {shows?.slice(0, 3).map((show) => (
+      {shows?.slice(0, 4).map((show) => (
         <Link to={`show/${show?.id}`} key={show.id}>
           <div
             className="show-info">

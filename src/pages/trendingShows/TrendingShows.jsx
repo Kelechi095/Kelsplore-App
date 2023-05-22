@@ -24,16 +24,12 @@ const TrendingShows = () => {
     <div>
       <Navbar />
       <div className="shows-back-header">
-        <h2>ALL TRENDING SERIES</h2>
         <Link to="/movies">
-          <button>
-            <MdKeyboardBackspace className="icon" />
-          </button>
+          <button>Back</button>
         </Link>
       </div>
-      <div 
-      className="show-list">
-        {shows?.results?.slice(0, 18).map((show) => (
+      <div className="show-list">
+        {shows?.results?.slice(0, 20).map((show) => (
           <Link to={`show/${show.id}`} key={show.id}>
             <div key={show?.id} className="show-info">
               <img

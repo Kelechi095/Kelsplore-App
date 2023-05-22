@@ -6,7 +6,7 @@ const MovieList = ({ movies }) => {
 
   return (
     <div className="movie-list">
-      {movies?.slice(0, 3).map((movie) => (
+      {movies?.slice(0, 4).map((movie) => (
         <Link to={`movie/${movie.id}`} key={movie.id}>
           <div 
           className="movie-info">
