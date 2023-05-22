@@ -24,7 +24,7 @@ const TrendingShows = () => {
   return (
     <div>
       <Navbar />
-      <div className="back-header">
+      <div className="shows-back-header">
         <h2>TRENDING TV SHOWS</h2>
         <Link to="/movies">
           <button>

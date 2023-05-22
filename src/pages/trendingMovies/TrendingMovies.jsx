@@ -4,8 +4,9 @@ import { useContext } from "react";
 import FetchContext from "../../components/context/FetchContext";
 import { useQuery } from "react-query";
 import { MdKeyboardBackspace } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {motion} from 'framer-motion'
+import { useEffect } from "react";
 
 const TrendingMovies = () => {
   const { fetchMovies } = useContext(FetchContext);
@@ -15,10 +16,17 @@ const TrendingMovies = () => {
     queryFn: fetchMovies,
   });
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+
   return (
     <div>
       <Navbar />
-      <div className="back-header">
+      <div className="movies-back-header">
         <h2>TRENDING MOVIES</h2>
         <Link to="/movies">
           <button>

@@ -55,22 +55,23 @@
   color: var(--rating);
 }
 
-.back-header {
+.movies-back-header {
   padding: 20px 40px;
   gap: 20px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.back-header h2 {
+.movies-back-header h2 {
   font-size: 18px;
   color: var(--dark-mode-bg);
 }
 
-.back-header button {
+.movies-back-header button {
   padding: 3px 30px;
   background-color: var(--dark-mode-button);
   color: var(--light-mode-bg);
@@ -81,11 +82,11 @@
 
 }
 
-.back-header button:hover {
+.movies-back-header button:hover {
   background-color: var(--dark-mode-button-hover);
 }
 
-.back-header .icon {
+.movies-back-header .icon {
   font-size: 20px;
   color: var(--light-mode-bg);
 }
@@ -103,18 +104,18 @@
     border-radius: 0;
   }
 
-  .back-header h2 {
+  .movies-back-header h2 {
     font-size: 15px;
   }
-  .back-header {
+  .movies-back-header {
     padding: 20px 0;
     width: 85%;
   }
-  .back-header button {
+  .movies-back-header button {
     padding: 3px 20px;
   }
 
   .title-rating .title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
