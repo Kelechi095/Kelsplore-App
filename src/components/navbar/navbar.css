@@ -101,7 +101,6 @@ nav {
 
   .mobile-nav {
     display: flex;
-    cursor: pointer;
     color: white;
     justify-content: space-between;
     align-items: center;
