@@ -60,7 +60,13 @@ const Navbar = () => {
 
       {/* MOBILE NAV MENU */}
 
-      <div className="mobile-menu">
+      <div className="mobile-nav" onClick={() => navigate("/")}>
+        <div className="mobile-logo">
+          <FaGripfire size={23} className="mobile-logo-icon" />
+          <h4>
+            Kel<span className="span-two">Splore</span>
+          </h4>
+        </div>
         {showNavbar ? (
           <FaTimes
             className="icon"
@@ -72,40 +78,32 @@ const Navbar = () => {
       </div>
 
       <ul className={showNavbar ? "hidden-nav active" : "hidden-nav"}>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "activeBtn" : "inactiveBtn"
-            }
-          >
-            <li>Home</li>
-          </NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
+        >
+          <li>Home</li>
+        </NavLink>
 
-          <NavLink
-            to="/movies"
-            className={({ isActive }) =>
-              isActive ? "activeBtn" : "inactiveBtn"
-            }
-          >
-            <li>Movies</li>
-          </NavLink>
+        <NavLink
+          to="/movies"
+          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
+        >
+          <li>Movies</li>
+        </NavLink>
 
-          <NavLink
-            to="/books"
-            className={({ isActive }) =>
-              isActive ? "activeBtn" : "inactiveBtn"
-            }
-          >
-            <li>Books</li>
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? "activeBtn" : "inactiveBtn"
-            }
-          >
-            <li>Contact</li>
-          </NavLink>
+        <NavLink
+          to="/books"
+          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
+        >
+          <li>Books</li>
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? "activeBtn" : "inactiveBtn")}
+        >
+          <li>Contact</li>
+        </NavLink>
       </ul>
     </nav>
   );

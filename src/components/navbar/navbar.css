@@ -51,7 +51,7 @@ nav {
   font-size: 15px;
 }
 
-.mobile-menu {
+.mobile-nav {
   display: none;
 }
 
@@ -84,31 +84,28 @@ nav {
   }
 
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: none;
   }
 
-  .logo h4 {
-    font-size: 14px;
-  }
-
-  .logo span {
-    font-size: 14px;
-  }
 
   .desktop-menu {
     display: none;
   }
 
-  .mobile-menu {
+  .mobile-nav {
     display: flex;
     cursor: pointer;
     color: white;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding-right: 5px;
+  }
+
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    
   }
 
   .hidden-nav {
@@ -135,7 +132,7 @@ nav {
   }
 
   .icon {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .inactiveBtn {
