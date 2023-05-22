@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="logo" onClick={() => navigate("/")}>
+      <div className="logo">
         <FaGripfire size={23} className="logo-icon" />
         <h4 className="desktop-logo">
           Kel<span>Splore</span>
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* MOBILE NAV MENU */}
 
-      <div className="mobile-nav" onClick={() => navigate("/")}>
+      <div className="mobile-nav" >
         <div className="mobile-logo">
           <FaGripfire size={23} className="mobile-logo-icon" />
           <h4>
