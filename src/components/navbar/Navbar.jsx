@@ -67,7 +67,7 @@ const Navbar = () => {
             Kel<span className="span-two">Splore</span>
           </h4>
         </div>
-        <button className="nav-icon-btn">
+        
           {showNavbar ? (
             <FaTimes
               className="icon"
@@ -79,7 +79,6 @@ const Navbar = () => {
               onClick={() => setShowNavbar(!showNavbar)}
             />
           )}
-        </button>
       </div>
 
       <ul className={showNavbar ? "hidden-nav active" : "hidden-nav"}>

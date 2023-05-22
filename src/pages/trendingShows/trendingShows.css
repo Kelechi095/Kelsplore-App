@@ -52,7 +52,7 @@
 }
 
 .shows-back-header {
-  padding: 10px 40px;
+  padding: 10px 20px;
   gap: 20px;
   width: 80%;
   margin: 0 auto;
@@ -63,12 +63,12 @@
 }
 
 .back-header h2 {
-  font-size: 18px;
+  font-size: 21px;
   color: var(--dark-mode-bg);
 }
 
 .shows-back-header button {
-  padding: 3px 30px;
+  padding: 5px 30px;
   background-color: var(--dark-mode-button);
   border: none;
   border-radius: 5px;
@@ -100,13 +100,12 @@
 
   .shows-back-header h2 {
     color: var(--dark-mode-bg);
-    font-size: 15px;
+    font-size: 18px;
   }
   .shows-back-header {
-    padding: 20px 0;
     width: 85%;
   }
   .shows-back-header button {
-    padding: 3px 20px;
+    padding: 3px 30px;
   }
 }

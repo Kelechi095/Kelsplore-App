@@ -26,7 +26,7 @@ const TrendingMovies = () => {
     <div>
       <Navbar />
       <div className="movies-back-header">
-        <h2>TRENDING MOVIES</h2>
+        <h2>ALL TRENDING MOVIES</h2>
         <Link to="/movies">
           <button>
             <MdKeyboardBackspace className="icon" />
