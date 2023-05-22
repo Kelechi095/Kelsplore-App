@@ -1,15 +1,15 @@
+import { useState } from "react";
 import "./navbar.css";
-import { FaGripfire } from "react-icons/fa";
-import { AiOutlineHome } from "react-icons/ai";
-import { BsEnvelope, BsBook } from "react-icons/bs";
-import { MdOutlineMovieCreation } from "react-icons/md";
-
-import { NavLink } from "react-router-dom";
+import { FaGripfire, FaBars, FaTimes } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [showNavbar, setShowNavbar] = useState(false);
+
   return (
     <nav>
-      <div className="logo">
+      <div className="logo" onClick={() => navigate("/")}>
         <FaGripfire size={23} className="logo-icon" />
         <h4 className="desktop-logo">
           Kel<span>Splore</span>
@@ -48,62 +48,64 @@ const Navbar = () => {
         </li>
         <li className="connect">
           <NavLink
-            to="/message"
+            to="/contact"
             className={({ isActive }) =>
               isActive ? "activeBtn" : "inactiveBtn"
             }
           >
-            Connect with me
+            Contact
           </NavLink>
         </li>
       </ul>
 
       {/* MOBILE NAV MENU */}
 
-      <ul className="mobile-menu">
-        <li>
+      <div className="mobile-menu">
+        {showNavbar ? (
+          <FaTimes
+            className="icon"
+            onClick={() => setShowNavbar(!showNavbar)}
+          />
+        ) : (
+          <FaBars className="icon" onClick={() => setShowNavbar(!showNavbar)} />
+        )}
+      </div>
+
+      <ul className={showNavbar ? "hidden-nav active" : "hidden-nav"}>
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive ? "activeBtn" : "inactiveBtn"
             }
           >
-            <AiOutlineHome className="icon" />
+            <li>Home</li>
           </NavLink>
-        </li>
 
-        <li>
           <NavLink
             to="/movies"
             className={({ isActive }) =>
               isActive ? "activeBtn" : "inactiveBtn"
             }
           >
-            <MdOutlineMovieCreation className="icon" />
+            <li>Movies</li>
           </NavLink>
-        </li>
 
-        <li>
           <NavLink
             to="/books"
             className={({ isActive }) =>
               isActive ? "activeBtn" : "inactiveBtn"
             }
           >
-            <BsBook className="icon" />
+            <li>Books</li>
           </NavLink>
-        </li>
-        
-        <li>
           <NavLink
-            to="/message"
+            to="/contact"
             className={({ isActive }) =>
               isActive ? "activeBtn" : "inactiveBtn"
             }
           >
-            <BsEnvelope className="icon" />
+            <li>Contact</li>
           </NavLink>
-        </li>
       </ul>
     </nav>
   );

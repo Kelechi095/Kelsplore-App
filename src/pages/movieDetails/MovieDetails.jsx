@@ -25,25 +25,13 @@ const MovieDetails = () => {
     <div>
       <Navbar />
       {isSuccess && (
-        <motion.div 
-        className="details"
-        animate={{
-          opacity: 1,
-        
-        }}
-        initial={{
-          opacity: 0.1,
-        
-        }}
-        transition={{
-          duration: 2,
-        }}
-        >
+        <div 
+        className="details">
           <img
             src={`https://image.tmdb.org/t/p/original${movieDetails?.poster_path}`}
             alt=""
           />
-        </motion.div>
+        </div>
       )}
     </div>
   );

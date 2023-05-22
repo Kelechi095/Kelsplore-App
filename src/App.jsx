@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FetchProvider } from "./components/context/FetchContext";
 import MoviePage from "./pages/moviePage/MoviePage";
 import HomePage from "./pages/homePage/HomePage";
-import AboutPage from "./pages/aboutPage/AboutPage";
 import BookPage from "./pages/bookPage/BookPage";
 import MessageMe from "./pages/messageMe/MessageMe";
 import TrendingMovies from "./pages/trendingMovies/TrendingMovies";
@@ -53,8 +52,7 @@ function App() {
               </Route>
             </Route>
             <Route path="/books" element={<BookPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/message" element={<MessageMe />} />
+            <Route path="/contact" element={<MessageMe />} />
           </Route>
         </Routes>
       </BrowserRouter>

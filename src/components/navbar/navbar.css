@@ -20,6 +20,7 @@ nav {
   justify-content: flex-start;
   gap: 10px;
   width: 30%;
+  cursor: pointer;
 }
 
 .logo h4 {
@@ -43,14 +44,18 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 
 .desktop-menu li {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .mobile-menu {
+  display: none;
+}
+
+.hidden-nav {
   display: none;
 }
 
@@ -74,11 +79,22 @@ nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 0px 30px;
+    padding: 0px 15px;
     height: 50px;
   }
-  nav .logo {
-    display: none;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .logo h4 {
+    font-size: 14px;
+  }
+
+  .logo span {
+    font-size: 14px;
   }
 
   .desktop-menu {
@@ -89,9 +105,33 @@ nav {
     display: flex;
     cursor: pointer;
     color: white;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
+    padding-right: 5px;
+  }
+
+  .hidden-nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 90px;
+    padding: 60px;
+    align-items: center;
+    top: 50px;
+    left: -500px;
+    height: 100vh;
+    width: 70%;
+    background-color: var(--dark-mode-bg);
+    transition: all .7s;
+  }
+
+  .hidden-nav.active {
+    left: 0;
+  }
+
+  .hidden-nav li {
+    font-size: 17px;
   }
 
   .icon {
@@ -99,6 +139,6 @@ nav {
   }
 
   .inactiveBtn {
-    color: grey;
+    color: rgb(199, 196, 196);
   }
 }

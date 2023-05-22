@@ -9,11 +9,12 @@
 /*  #0467FB #4B59F7*/
 
 :root {
-  --dark-mode-bg: #101522;
-  --dark-mode-button: #0467fb;
+  --dark-mode-bg: #1d267d;
+  --dark-mode-button: #404cbb;
   --dark-mode-button-hover: #4b59f7;
-  --dark-mode-bg-hover: #182452;
-  --light-mode-bg: #ffffff;
+  --light-mode-text: #3d3c3c;
+  --light-mode-bg: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
   --rating: #eb2727;
   --box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }

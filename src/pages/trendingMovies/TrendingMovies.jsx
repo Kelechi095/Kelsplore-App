@@ -5,7 +5,6 @@ import FetchContext from "../../components/context/FetchContext";
 import { useQuery } from "react-query";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
-import {motion} from 'framer-motion'
 import { useEffect } from "react";
 
 const TrendingMovies = () => {
@@ -35,18 +34,8 @@ const TrendingMovies = () => {
         </Link>
       </div>
 
-      <motion.div 
-      className="movie-list"
-      animate={{
-        opacity: 1
-      }}
-      initial={{
-        opacity: 0.1
-      }}
-      transition={{
-        duration: 2
-      }}
-      >
+      <div 
+      className="movie-list">
         {movies?.results?.slice(0, 18).map((movie) => (
           <Link to={`movie/${movie.id}`} key={movie.id}>
             <div key={movie.id} className="movie-info">
@@ -61,7 +50,7 @@ const TrendingMovies = () => {
             </div>
           </Link>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
