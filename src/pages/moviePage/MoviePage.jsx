@@ -30,7 +30,7 @@ const MoviePage = () => {
       </div>
       <MovieList movies={movies?.results} />
 
-      { isSuccess &&<div className="header-title">
+      { isSuccess && <div className="header-title">
         <Link to="/movies/trending-shows">
           <button>TRENDING TV SHOWS</button>
         </Link>

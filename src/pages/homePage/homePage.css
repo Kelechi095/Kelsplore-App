@@ -12,43 +12,42 @@ section {
 }
 
 section span {
-  color: white;
+  color: var(--dark-mode-bg-2)
 }
 
 section h2 {
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
-  background: linear-gradient(to right, white, grey);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--dark-mode-bg);
   margin-top: 40px;
   font-size: 2rem;
 }
 
 .second-line {
-  color: white;
+  color: var(--dark-mode-bg);
 }
 
 section button {
   margin-top: 40px;
   padding: 11px 40px;
   border-radius: 4px;
-  background-image: linear-gradient(to right, grey, rgb(56, 56, 56));
+  background-color: var(--dark-mode-button);
   border: none;
-  color: rgb(206, 202, 202);
+  color: var(--light-mode-bg);
   font-weight: 600;
   cursor: pointer;
+  box-shadow: var(--box-shadow);
 }
 
 section button:hover {
-  opacity: 0.8;
+  background-color: var(--dark-mode-button-hover);
 }
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
 
 @media screen and (max-width: 760px) {
   section button {
-    padding: 10px 30px;
+    padding: 10px 50px;
   }
 
   section h2 {

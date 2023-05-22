@@ -12,19 +12,19 @@
 
 .header-title button {
   margin-top: 40px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 4px;
   border: none;
-  background-image: linear-gradient(to right, grey, rgb(27, 26, 26));
-
+  background-color: var(--dark-mode-button);
+  color: var(--light-mode-bg);
   border: none;
-  color: rgb(170, 170, 170);
   font-weight: 600;
   cursor: pointer;
+  box-shadow: var(--box-shadow);
 }
 
 .header-title button:hover {
-  opacity: 0.8;
+  background-color: var(--dark-mode-button-hover);
 }
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
@@ -35,6 +35,6 @@
   }
 
   .header-title button {
-    padding: 10px 7px;
+    padding: 10px 20px;
   }
 }

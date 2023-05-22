@@ -1,20 +1,16 @@
 nav h2 {
-  font-weight: 300;
-}
-
-nav sub {
-  font-size: 30px;
+  font-weight: 600;
 }
 
 nav {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
   height: 70px;
   padding: 20px;
-  border-bottom: 1px solid rgb(97, 96, 96);
+  background-color: var(--dark-mode-bg);
 }
 
 .logo {
@@ -25,29 +21,31 @@ nav {
 }
 
 .logo h4 {
-  color: white;
-  font-weight: 400;
-  font-size: 16px;
+  color: var(--light-mode-bg);
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .logo span {
   font-family: 400;
-  font-size: 16px;
-  color: var(--grey3);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--light-mode-bg);
 }
 
 .logo-icon {
-  color: var(--grey3);
+  color: var(--light-mode-bg);
 }
 
 .desktop-menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 40px;
 }
 
 .desktop-menu li {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .mobile-menu {
@@ -55,27 +53,24 @@ nav {
 }
 
 .activeBtn {
-  color: white;
+  color: var(--light-mode-bg);
   text-decoration: none;
   font-weight: 700;
 }
 
 .inactiveBtn {
-  color: grey;
+  color: var(--light-mode-bg);
   text-decoration: none;
+  font-weight: 400;
 }
 
-.connect {
-  border-bottom: 1px solid grey;
-  padding-bottom: 3px;
-}
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
 
 @media screen and (max-width: 760px) {
   nav {
     display: flex;
-    width: 95%;
+    width: 100%;
     justify-content: space-between;
     padding: 0px 30px;
     height: 50px;
@@ -99,5 +94,9 @@ nav {
 
   .icon {
     font-size: 21px;
+  }
+
+  .inactiveBtn {
+    color: grey;
   }
 }

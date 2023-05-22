@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;700;800&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&family=Ubuntu:ital,wght@1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;700;800&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&family=Ubuntu:ital,wght@1,500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,23 +6,16 @@
   padding: 0;
 }
 
-:root {
-  --green: #09c372;
-  --green-dark: #07a15e;
-  --green-light: #4ee44e;
-  --cyan: #06dfdf;
-  --grey0: #f9f9f9;
-  --grey1: #dbe1e8;
-  --grey2: #b2becd;
-  --grey3: #a7a7a7;
-  --grey4: #6c79a3;
-  --grey5: #454e56;
-  --grey6: #2a2e35;
-  --grey7: #12181b;
-  --grey8: #181818;
+/*  #0467FB #4B59F7*/
 
-  --themebg1: #1a193a;
-  --themebg2: #2f285f;
+:root {
+  --dark-mode-bg: #101522;
+  --dark-mode-button: #0467fb;
+  --dark-mode-button-hover: #4b59f7;
+  --dark-mode-bg-hover: #182452;
+  --light-mode-bg: #ffffff;
+  --rating: #eb2727;
+  --box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -30,25 +23,20 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
-  background-color: var(--grey8);
+  background-color: var(--light-mode-bg);
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
 section {
   margin: 0 auto;
   margin-top: 40px;
-  
 }
 
 a {
   text-decoration: none;
 }
-
-
-
-

@@ -15,8 +15,8 @@
   border-radius: 5px;
   overflow: hidden;
   padding: 0 0 10px 0;
-  background-color: var(--grey8);
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: var(--light-mode-bg);
+  box-shadow: var(--box-shadow);
 }
 
 .movie-info img {
@@ -25,8 +25,8 @@
 
 .movie-info .title {
   text-align: center;
-  font-weight: 500;
-  color: rgb(204, 202, 202);
+  font-weight: 600;
+  color: var(--dark-mode-bg);
   font-size: 18px;
 }
 
@@ -46,12 +46,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid grey;
+  border: 1px solid var(--rating);
   border-radius: 50%;
   width: 32px;
   height: 32px;
+  font-weight: 500;
   font-size: 14px;
-  color: rgb(184, 179, 179);
+  color: var(--rating);
 }
 
 .back-header {
@@ -66,26 +67,27 @@
 
 .back-header h2 {
   font-size: 18px;
-  background: linear-gradient(to right, grey, rgb(37, 37, 37));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--dark-mode-bg);
 }
 
 .back-header button {
   padding: 3px 30px;
-  background-image: linear-gradient(to right, grey, rgb(27, 26, 26));
+  background-color: var(--dark-mode-button);
+  color: var(--light-mode-bg);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: var(--box-shadow);
+
 }
 
 .back-header button:hover {
-  opacity: 0.5;
+  background-color: var(--dark-mode-button-hover);
 }
 
 .back-header .icon {
   font-size: 20px;
-  color: grey;
+  color: var(--light-mode-bg);
 }
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */

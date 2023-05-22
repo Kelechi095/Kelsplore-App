@@ -18,7 +18,7 @@ const TvshowsList = ({ shows }) => {
             
             }}
             transition={{
-              duration: 2,
+              duration: 1,
             }}
           >
             <img

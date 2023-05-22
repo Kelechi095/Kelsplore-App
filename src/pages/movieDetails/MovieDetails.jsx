@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import axios from "axios";
+import {motion} from 'framer-motion'
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -24,12 +25,25 @@ const MovieDetails = () => {
     <div>
       <Navbar />
       {isSuccess && (
-        <div className="details">
+        <motion.div 
+        className="details"
+        animate={{
+          opacity: 1,
+        
+        }}
+        initial={{
+          opacity: 0.1,
+        
+        }}
+        transition={{
+          duration: 2,
+        }}
+        >
           <img
             src={`https://image.tmdb.org/t/p/original${movieDetails?.poster_path}`}
             alt=""
           />
-        </div>
+        </motion.div>
       )}
     </div>
   );

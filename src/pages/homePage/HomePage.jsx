@@ -29,7 +29,7 @@ const HomePage = () => {
         </h2>
 
         <Link to="/about">
-          <button>Explore</button>
+          <button>EXPLORE</button>
         </Link>
       </section>
     </main>
