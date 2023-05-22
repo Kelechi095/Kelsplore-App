@@ -56,11 +56,11 @@
 }
 
 .movies-back-header {
-  padding: 20px 40px;
+  padding: 10px 40px;
   gap: 20px;
   width: 80%;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
