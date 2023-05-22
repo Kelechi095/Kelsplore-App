@@ -106,8 +106,8 @@
 
   
   .movies-back-header {
-    padding: 0;
-    width: 85%;
+    padding: 0 20px;
+    width: 100%;
   }
 
   .movies-back-header h2 {

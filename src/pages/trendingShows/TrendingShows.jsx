@@ -24,7 +24,7 @@ const TrendingShows = () => {
     <div>
       <Navbar />
       <div className="shows-back-header">
-        <h2>TRENDING TV SHOWS</h2>
+        <h2>ALL TRENDING SERIES</h2>
         <Link to="/movies">
           <button>
             <MdKeyboardBackspace className="icon" />

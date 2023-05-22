@@ -41,7 +41,7 @@ const MoviePage = () => {
       {isSuccess && (
         <div className="shows-header-title">
           <Link to="/movies/trending-shows">
-            <button>TRENDING TV SHOWS</button>
+            <button>TRENDING SERIES</button>
           </Link>
         </div>
       )}
