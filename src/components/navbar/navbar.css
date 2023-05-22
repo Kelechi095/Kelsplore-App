@@ -71,6 +71,13 @@ nav {
   font-weight: 400;
 }
 
+.nav-icon-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 
 /* MEDIA QUERY FOR SCREENS SIZES BELOW 761PX */
 
@@ -105,8 +112,9 @@ nav {
   .mobile-logo {
     display: flex;
     align-items: center;
-    
+
   }
+
 
   .hidden-nav {
     display: flex;

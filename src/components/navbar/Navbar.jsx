@@ -60,21 +60,26 @@ const Navbar = () => {
 
       {/* MOBILE NAV MENU */}
 
-      <div className="mobile-nav" >
+      <div className="mobile-nav">
         <div className="mobile-logo">
           <FaGripfire size={23} className="mobile-logo-icon" />
           <h4>
             Kel<span className="span-two">Splore</span>
           </h4>
         </div>
-        {showNavbar ? (
-          <FaTimes
-            className="icon"
-            onClick={() => setShowNavbar(!showNavbar)}
-          />
-        ) : (
-          <FaBars className="icon" onClick={() => setShowNavbar(!showNavbar)} />
-        )}
+        <button className="nav-icon-btn">
+          {showNavbar ? (
+            <FaTimes
+              className="icon"
+              onClick={() => setShowNavbar(!showNavbar)}
+            />
+          ) : (
+            <FaBars
+              className="icon"
+              onClick={() => setShowNavbar(!showNavbar)}
+            />
+          )}
+        </button>
       </div>
 
       <ul className={showNavbar ? "hidden-nav active" : "hidden-nav"}>
